@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E16155C56E78367DC69F462 /* Pods_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5398AA05B8EF5D5093DCFF2E /* Pods_Trip.framework */; };
+		A20BCA80228EAE1F0093D3B6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20BCA7F228EAE1F0093D3B6 /* RegisterViewController.swift */; };
 		A2165882228437270084C296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2165881228437270084C296 /* AppDelegate.swift */; };
 		A2165884228437270084C296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2165883228437270084C296 /* ViewController.swift */; };
 		A2165887228437270084C296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2165885228437270084C296 /* Main.storyboard */; };
 		A2165889228437280084C296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2165888228437280084C296 /* Assets.xcassets */; };
 		A216588C228437280084C296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A216588A228437280084C296 /* LaunchScreen.storyboard */; };
+		A216589522843C5D0084C296 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216589422843C5D0084C296 /* Realm.swift */; };
+		A2165897228441420084C296 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2165896228441420084C296 /* MapViewController.swift */; };
+		A2165899228452F70084C296 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2165898228452F70084C296 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		073E2FC56685B6016686B492 /* Pods-Trip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip.release.xcconfig"; path = "Target Support Files/Pods-Trip/Pods-Trip.release.xcconfig"; sourceTree = "<group>"; };
+		5398AA05B8EF5D5093DCFF2E /* Pods_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A18F16EF2959BB79E0B11A12 /* Pods-Trip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip.debug.xcconfig"; path = "Target Support Files/Pods-Trip/Pods-Trip.debug.xcconfig"; sourceTree = "<group>"; };
+		A20BCA7F228EAE1F0093D3B6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A216587E228437270084C296 /* Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2165881228437270084C296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2165883228437270084C296 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,9 @@
 		A2165888228437280084C296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A216588B228437280084C296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A216588D228437280084C296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A216589422843C5D0084C296 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		A2165896228441420084C296 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A2165898228452F70084C296 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E16155C56E78367DC69F462 /* Pods_Trip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				A2165880228437270084C296 /* Trip */,
 				A216587F228437270084C296 /* Products */,
+				EEDB62F4D576F2C27B868586 /* Pods */,
+				D59167053E193D5958A026FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,43 @@
 		A2165880228437270084C296 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
+				A216589322843C430084C296 /* Model */,
 				A2165881228437270084C296 /* AppDelegate.swift */,
 				A2165883228437270084C296 /* ViewController.swift */,
 				A2165885228437270084C296 /* Main.storyboard */,
 				A2165888228437280084C296 /* Assets.xcassets */,
 				A216588A228437280084C296 /* LaunchScreen.storyboard */,
+				A2165896228441420084C296 /* MapViewController.swift */,
 				A216588D228437280084C296 /* Info.plist */,
+				A2165898228452F70084C296 /* CameraViewController.swift */,
+				A20BCA7F228EAE1F0093D3B6 /* RegisterViewController.swift */,
 			);
 			path = Trip;
+			sourceTree = "<group>";
+		};
+		A216589322843C430084C296 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A216589422843C5D0084C296 /* Realm.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D59167053E193D5958A026FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5398AA05B8EF5D5093DCFF2E /* Pods_Trip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEDB62F4D576F2C27B868586 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A18F16EF2959BB79E0B11A12 /* Pods-Trip.debug.xcconfig */,
+				073E2FC56685B6016686B492 /* Pods-Trip.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2165890228437280084C296 /* Build configuration list for PBXNativeTarget "Trip" */;
 			buildPhases = (
+				F0D291A881488B80B781337D /* [CP] Check Pods Manifest.lock */,
 				A216587A228437270084C296 /* Sources */,
 				A216587B228437270084C296 /* Frameworks */,
 				A216587C228437270084C296 /* Resources */,
+				D263D8CA896A061AFB9ADB22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +176,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D263D8CA896A061AFB9ADB22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trip/Pods-Trip-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trip/Pods-Trip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0D291A881488B80B781337D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A216587A228437270084C296 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A2165884228437270084C296 /* ViewController.swift in Sources */,
+				A2165899228452F70084C296 /* CameraViewController.swift in Sources */,
+				A20BCA80228EAE1F0093D3B6 /* RegisterViewController.swift in Sources */,
 				A2165882228437270084C296 /* AppDelegate.swift in Sources */,
+				A216589522843C5D0084C296 /* Realm.swift in Sources */,
+				A2165897228441420084C296 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +379,11 @@
 		};
 		A2165891228437280084C296 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A18F16EF2959BB79E0B11A12 /* Pods-Trip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RY7UU9C96T;
 				INFOPLIST_FILE = Trip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,9 +398,11 @@
 		};
 		A2165892228437280084C296 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 073E2FC56685B6016686B492 /* Pods-Trip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RY7UU9C96T;
 				INFOPLIST_FILE = Trip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
