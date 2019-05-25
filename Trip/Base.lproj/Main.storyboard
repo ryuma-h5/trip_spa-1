@@ -22,7 +22,7 @@
                                 <rect key="frame" x="112" y="414" width="190" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="マークする">
+                                <state key="normal" title="Marking">
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -33,15 +33,19 @@
                                 <rect key="frame" x="101" y="616" width="213" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="記録を見る">
+                                <state key="normal" title="World">
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Q2-Nl-1QE" kind="show" id="zas-Jn-TyD"/>
+                                    <segue destination="4Q2-Nl-1QE" kind="show" id="jFz-gQ-SRg"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="GXi-cZ-9ac">
+                                <rect key="frame" x="20" y="127" width="374" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZQf-16-aDz"/>
@@ -49,21 +53,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ehC-5J-tW0">
-            <objects>
-                <viewController id="SaL-RJ-jcX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0mo-7u-k1H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="SZi-Gu-bfu"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NBB-2D-B37" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="122" y="874"/>
         </scene>
         <!--Title-->
         <scene sceneID="Nfk-qa-rF2">
@@ -81,26 +70,18 @@
                                 <rect key="frame" x="131" y="636" width="152" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="アップ"/>
+                                <state key="normal" title="Mark"/>
                                 <connections>
                                     <action selector="up" destination="Im0-IZ-ghG" eventType="touchUpInside" id="tb6-Ky-udt"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="tod-Lo-rDQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCN-px-8Z3">
                                 <rect key="frame" x="262" y="74" width="108" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="写真を追加する"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Photo"/>
                                 <connections>
                                     <action selector="camera:" destination="Im0-IZ-ghG" eventType="touchUpInside" id="tPI-Dk-lcA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp1-f3-id2">
-                                <rect key="frame" x="50" y="84" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="bib-Hh-tkI"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L71-uq-EMp">
@@ -108,10 +89,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp1-f3-id2">
+                                <rect key="frame" x="61" y="74" width="63" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="back" destination="Im0-IZ-ghG" eventType="touchUpInside" id="tyI-9a-gei"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="fSX-yE-zdm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="T82-wb-cP9"/>
@@ -122,12 +112,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPN-s7-Mi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="871.875"/>
+            <point key="canvasLocation" x="1098.5507246376812" y="1004.4642857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--record-->
         <scene sceneID="f32-Vd-7sO">
             <objects>
-                <viewController id="1yT-ZR-3Rv" sceneMemberID="viewController">
+                <viewController id="1yT-ZR-3Rv" customClass="DetailViewController" customModule="Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jsc-Zg-ud5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,9 +134,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="7oy-zw-Nhu"/>
                     </view>
+                    <navigationItem key="navigationItem" title="record" id="hTj-Ds-1wH">
+                        <barButtonItem key="rightBarButtonItem" title="top" id="sST-YZ-clJ">
+                            <connections>
+                                <action selector="back" destination="1yT-ZR-3Rv" id="S5l-pQ-SUy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="image" destination="LVU-QG-fVa" id="FSy-t8-ziW"/>
+                        <outlet property="memo" destination="b59-y9-oJV" id="giK-x9-1NF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OL4-m6-Rbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,26 +166,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCz-hp-4aJ">
-                                <rect key="frame" x="28" y="50" width="31" height="30"/>
+                                <rect key="frame" x="29" y="50" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る"/>
+                                <state key="normal" title="◀︎"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="aQ1-Dq-orO"/>
+                                    <action selector="back" destination="4Q2-Nl-1QE" eventType="touchUpInside" id="G2Y-2B-0dA"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="nwx-Zz-oTB"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="EXU-1h-Osm" id="GlR-O9-FCb"/>
+                        <segue destination="1yT-ZR-3Rv" kind="show" identifier="ToDetail" id="v4N-W8-qtd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epo-ca-dhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2115.9420289855075" y="129.91071428571428"/>
+            <point key="canvasLocation" x="3003" y="-40"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bsx-bu-1LC">
@@ -205,7 +207,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="aQ1-Dq-orO"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="icon.png" width="274" height="259"/>
+    </resources>
 </document>

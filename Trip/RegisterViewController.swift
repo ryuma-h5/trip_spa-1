@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import CoreLocation
 
-class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet var photo: UIImageView!
     @IBOutlet var textMemo: UITextField!
@@ -22,9 +22,12 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
 
     let realm = try! Realm()
     let photoLocation = PhotoLocation()
+//    let textMemo = PhotoLocation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.textMemo.delegate = self
         
         setUpLacation()
         guard let _userLocation = userLocation else { return }
@@ -86,6 +89,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             return
         }
         photoLocation.image = _selectedImage.jpegData(compressionQuality: 1)!
+        photoLocation.textMemo = textMemo.text ?? ""
         try! realm.write {
             realm.add(photoLocation)
         }
@@ -96,6 +100,10 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    @IBAction func back() {
+        dismiss(animated: true, completion: nil)
     }
     
 }
