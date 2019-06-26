@@ -26,7 +26,7 @@
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Im0-IZ-ghG" kind="presentation" id="A3Q-JS-ewF"/>
+                                    <segue destination="Im0-IZ-ghG" kind="presentation" id="fug-PF-w1U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKT-35-cQg">
@@ -37,15 +37,15 @@
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Q2-Nl-1QE" kind="show" id="jFz-gQ-SRg"/>
+                                    <segue destination="2yg-hq-btz" kind="presentation" id="kt7-fN-VLw"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="GXi-cZ-9ac">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spa_mark.png" translatesAutoresizingMaskIntoConstraints="NO" id="GXi-cZ-9ac">
                                 <rect key="frame" x="20" y="127" width="374" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZQf-16-aDz"/>
@@ -55,6 +55,40 @@
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
         <!--Title-->
+        <scene sceneID="cjJ-eF-Vu8">
+            <objects>
+                <viewController id="2yg-hq-btz" customClass="MapViewController" customModule="Trip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hmp-sV-rLx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-TC-NgW">
+                                <rect key="frame" x="0.0" y="93" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgC-2r-p0z">
+                                <rect key="frame" x="28" y="55" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="◀︎"/>
+                                <connections>
+                                    <action selector="back" destination="2yg-hq-btz" eventType="touchUpInside" id="Mxl-SP-Sjl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ma4-mi-C1k"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="vZo-Xi-DaV"/>
+                    <connections>
+                        <outlet property="mapView" destination="gmZ-TC-NgW" id="oaD-lp-uAU"/>
+                        <segue destination="1yT-ZR-3Rv" kind="showDetail" identifier="ToDetail" id="WmH-Wy-0hP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGQ-DI-Dj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2215.9420289855075" y="76.339285714285708"/>
+        </scene>
+        <!--Register View Controller-->
         <scene sceneID="Nfk-qa-rF2">
             <objects>
                 <viewController id="Im0-IZ-ghG" customClass="RegisterViewController" customModule="Trip" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,28 +96,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ld-FP-YZJ">
+                                <rect key="frame" x="20" y="163" width="374" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Add a photo"/>
+                                <connections>
+                                    <action selector="camera:" destination="Im0-IZ-ghG" eventType="touchUpInside" id="Ye9-6k-fwn"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9o-DH-klv">
                                 <rect key="frame" x="20" y="163" width="374" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE4-MW-CUW">
-                                <rect key="frame" x="131" y="636" width="152" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Mark"/>
-                                <connections>
-                                    <action selector="up" destination="Im0-IZ-ghG" eventType="touchUpInside" id="tb6-Ky-udt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCN-px-8Z3">
-                                <rect key="frame" x="262" y="74" width="108" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Photo"/>
-                                <connections>
-                                    <action selector="camera:" destination="Im0-IZ-ghG" eventType="touchUpInside" id="tPI-Dk-lcA"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L71-uq-EMp">
                                 <rect key="frame" x="20" y="471" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,21 +117,89 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp1-f3-id2">
-                                <rect key="frame" x="61" y="74" width="63" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIo-GB-kc9">
+                                <rect key="frame" x="20" y="688" width="58" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="back"/>
+                                <state key="normal" title="Button" image="spa_unselected.png"/>
                                 <connections>
-                                    <action selector="back" destination="Im0-IZ-ghG" eventType="touchUpInside" id="tyI-9a-gei"/>
+                                    <action selector="tapped1" destination="Im0-IZ-ghG" eventType="touchUpInside" id="Rkq-Za-5j2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjQ-Ek-ded">
+                                <rect key="frame" x="86" y="688" width="58" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="spa_unselected.png"/>
+                                <connections>
+                                    <action selector="tapped2" destination="Im0-IZ-ghG" eventType="touchUpInside" id="aZq-3m-TI8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYd-6W-kFQ">
+                                <rect key="frame" x="152" y="688" width="58" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="spa_unselected.png"/>
+                                <connections>
+                                    <action selector="tapped3" destination="Im0-IZ-ghG" eventType="touchUpInside" id="erg-qt-lk0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxG-im-oOW">
+                                <rect key="frame" x="218" y="688" width="58" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="spa_unselected.png"/>
+                                <connections>
+                                    <action selector="tapped4" destination="Im0-IZ-ghG" eventType="touchUpInside" id="46G-sg-NNd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPy-gx-WZt">
+                                <rect key="frame" x="284" y="688" width="58" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="spa_unselected.png"/>
+                                <connections>
+                                    <action selector="tapped5" destination="Im0-IZ-ghG" eventType="touchUpInside" id="p5R-yN-y1P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE4-MW-CUW">
+                                <rect key="frame" x="149" y="566" width="117" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="save"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="up" destination="Im0-IZ-ghG" eventType="touchUpInside" id="tb6-Ky-udt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmj-Tv-Wcv">
+                                <rect key="frame" x="41" y="111" width="63" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="◀︎"/>
+                                <connections>
+                                    <action selector="back" destination="Im0-IZ-ghG" eventType="touchUpInside" id="c87-a7-nBa"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LvF-E7-hGT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="Guz-91-yU6"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fSX-yE-zdm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="T82-wb-cP9"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="favo1Button" destination="DIo-GB-kc9" id="1zN-y6-d4s"/>
+                        <outlet property="favo2Button" destination="TjQ-Ek-ded" id="kKr-wG-yBe"/>
+                        <outlet property="favo3Button" destination="BYd-6W-kFQ" id="58I-3Z-st9"/>
+                        <outlet property="favo4Button" destination="dxG-im-oOW" id="Ckt-v2-gNr"/>
+                        <outlet property="favo5Button" destination="EPy-gx-WZt" id="eD9-Sv-7bG"/>
                         <outlet property="photo" destination="X9o-DH-klv" id="jOO-Hs-g9l"/>
                         <outlet property="textMemo" destination="L71-uq-EMp" id="oWJ-ce-Vrn"/>
                     </connections>
@@ -126,6 +220,14 @@
                                 <rect key="frame" x="20" y="163" width="374" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDW-FP-7nO">
+                                <rect key="frame" x="320" y="618" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteRealm" destination="1yT-ZR-3Rv" eventType="touchUpInside" id="fmC-7S-9bf"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b59-y9-oJV">
                                 <rect key="frame" x="20" y="478" width="374" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -137,13 +239,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="7oy-zw-Nhu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="record" id="hTj-Ds-1wH">
-                        <barButtonItem key="rightBarButtonItem" title="top" id="sST-YZ-clJ">
-                            <connections>
-                                <action selector="back" destination="1yT-ZR-3Rv" id="S5l-pQ-SUy"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="record" id="JKa-rP-gnT"/>
                     <connections>
                         <outlet property="image" destination="LVU-QG-fVa" id="FSy-t8-ziW"/>
                         <outlet property="memo" destination="b59-y9-oJV" id="giK-x9-1NF"/>
@@ -152,41 +248,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OL4-m6-Rbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2091.304347826087" y="868.52678571428567"/>
-        </scene>
-        <!--Map View Controller-->
-        <scene sceneID="w3R-TY-5pL">
-            <objects>
-                <viewController id="4Q2-Nl-1QE" customClass="MapViewController" customModule="Trip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gFA-cF-3hT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXU-1h-Osm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="793"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCz-hp-4aJ">
-                                <rect key="frame" x="29" y="50" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="◀︎"/>
-                                <connections>
-                                    <action selector="back" destination="4Q2-Nl-1QE" eventType="touchUpInside" id="G2Y-2B-0dA"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <viewLayoutGuide key="safeArea" id="nwx-Zz-oTB"/>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="mapView" destination="EXU-1h-Osm" id="GlR-O9-FCb"/>
-                        <segue destination="1yT-ZR-3Rv" kind="show" identifier="ToDetail" id="v4N-W8-qtd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="epo-ca-dhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3003" y="-40"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bsx-bu-1LC">
@@ -208,6 +269,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon.png" width="274" height="259"/>
+        <image name="spa_mark.png" width="450" height="448"/>
+        <image name="spa_unselected.png" width="225" height="225"/>
     </resources>
 </document>

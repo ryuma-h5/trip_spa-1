@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E16155C56E78367DC69F462 /* Pods_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5398AA05B8EF5D5093DCFF2E /* Pods_Trip.framework */; };
+		A2069E0E22C22D2E00D8C1A0 /* spa_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A2069E0C22C22D2E00D8C1A0 /* spa_unselected.png */; };
+		A2069E0F22C22D2E00D8C1A0 /* spa_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = A2069E0D22C22D2E00D8C1A0 /* spa_mark.png */; };
 		A20743F02294EA5E00B47B93 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A20743EF2294EA5E00B47B93 /* icon.png */; };
 		A20A95412296B24700CB7D83 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20A95402296B24700CB7D83 /* CustomAnnotation.swift */; };
 		A20AEB2522938B4B009C389C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20AEB2422938B4B009C389C /* DetailViewController.swift */; };
@@ -26,6 +28,8 @@
 		073E2FC56685B6016686B492 /* Pods-Trip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip.release.xcconfig"; path = "Target Support Files/Pods-Trip/Pods-Trip.release.xcconfig"; sourceTree = "<group>"; };
 		5398AA05B8EF5D5093DCFF2E /* Pods_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18F16EF2959BB79E0B11A12 /* Pods-Trip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip.debug.xcconfig"; path = "Target Support Files/Pods-Trip/Pods-Trip.debug.xcconfig"; sourceTree = "<group>"; };
+		A2069E0C22C22D2E00D8C1A0 /* spa_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spa_unselected.png; sourceTree = "<group>"; };
+		A2069E0D22C22D2E00D8C1A0 /* spa_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spa_mark.png; sourceTree = "<group>"; };
 		A20743EF2294EA5E00B47B93 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		A20A95402296B24700CB7D83 /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		A20AEB2422938B4B009C389C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		A2165880228437270084C296 /* Trip */ = {
 			isa = PBXGroup;
 			children = (
+				A2069E0D22C22D2E00D8C1A0 /* spa_mark.png */,
+				A2069E0C22C22D2E00D8C1A0 /* spa_unselected.png */,
 				A216589322843C430084C296 /* Model */,
 				A2165881228437270084C296 /* AppDelegate.swift */,
 				A2165883228437270084C296 /* ViewController.swift */,
@@ -179,8 +185,10 @@
 			files = (
 				A216588C228437280084C296 /* LaunchScreen.storyboard in Resources */,
 				A20743F02294EA5E00B47B93 /* icon.png in Resources */,
+				A2069E0E22C22D2E00D8C1A0 /* spa_unselected.png in Resources */,
 				A2165889228437280084C296 /* Assets.xcassets in Resources */,
 				A2165887228437270084C296 /* Main.storyboard in Resources */,
+				A2069E0F22C22D2E00D8C1A0 /* spa_mark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

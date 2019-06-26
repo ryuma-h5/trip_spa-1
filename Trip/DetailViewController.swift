@@ -25,13 +25,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate {
         let images = detaliArray[number].image
         image.image = UIImage(data: images)
         
-        
-    
-       
-        
 //        let results = realm.objects(textMemo.self)
-        
-
         // Do any additional setup after loading the view.
     }
     
@@ -49,6 +43,13 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate {
     @IBAction func back() {
 //        dismiss(animated: true, completion: nil)
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func deleteRealm() {
+        try! realm.write {
+            realm.delete(detaliArray[number])
+        }
+        dismiss(animated: true, completion: nil)
     }
 
 }

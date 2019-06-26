@@ -35,7 +35,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             
             // ピンを生成.
-            var myPin: CustomAnnotation = CustomAnnotation()
+            let myPin: CustomAnnotation = CustomAnnotation()
             myPin.coordinate = center
             myPin.title = results[i].textMemo
             myPin.tag = i
